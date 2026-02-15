@@ -1,0 +1,112 @@
+{
+  "title": "Personal Endings: Мен and Сен",
+  "explanation_slides": [
+    "This lesson introduces **personal endings** for **\"мен\" (I)** and **\"сен\" (you)**. These endings attach to nouns and adjectives to show who or what something *is*.\\n\\nThink of them as the Kazakh way of saying \"I am...\" or \"You are...\"",
+    "When the word ends in a **hard consonant** or **vowel**, use the endings **-мын** (for \"мен\") and **-сың** (for \"сен\").**\\n\\nFor example: Мен студентпін (I am a student). Сен дәрігерсің (You are a doctor).",
+    "When the word ends in a **soft consonant** or **vowel**, use the endings **-мін** (for \"мен\") and **-сің** (for \"сен\").**\\n\\nFor example: Мен мұғаліммін (I am a teacher). Сен әдемісің (You are beautiful).",
+    "Remember: **-мын/-мін** are for **\"мен\"**, and **-сың/-сің** are for **\"сен\"**. Pay attention to whether the word ends in a hard or soft sound to choose the correct ending!"
+  ],
+  "examples": [
+    "Мен студентпін — I am a student.",
+    "Сен дәрігерсің — You are a doctor.",
+    "Мен мұғаліммін — I am a teacher.",
+    "Сен әдемісің — You are beautiful.",
+    "Мен қазақпын — I am Kazakh.",
+    "Сен ақылдысың — You are smart."
+  ],
+  "quiz": [
+    {
+      "question": "Мен ... (мұғалім)",
+      "options": [
+        "мұғаліммін",
+        "мұғаліммін",
+        "мұғалімсың",
+        "мұғалімсің"
+      ],
+      "correct_index": 0,
+      "question_type": "multiple_choice"
+    },
+    {
+      "question": "Сен ... (дәрігер)",
+      "options": [
+        "дәрігермін",
+        "дәрігерсың",
+        "дәрігермін",
+        "дәрігерсің"
+      ],
+      "correct_index": 3,
+      "question_type": "multiple_choice"
+    },
+    {
+      "question": "Мен ... (студент)",
+      "options": [
+        "студентпін",
+        "студентмін",
+        "студентсың",
+        "студентсің"
+      ],
+      "correct_index": 0,
+      "question_type": "multiple_choice"
+    },
+    {
+      "question": "Сен ... (ақылды)",
+      "options": [
+        "ақылдымын",
+        "ақылдысың",
+        "ақылдымін",
+        "ақылдысің"
+      ],
+      "correct_index": 1,
+      "question_type": "multiple_choice"
+    },
+    {
+      "question": "Мен ... (қазақ)",
+      "options": [
+        "қазақпын",
+        "қазақмін",
+        "қазақсың",
+        "қазақсің"
+      ],
+      "correct_index": 0,
+      "question_type": "multiple_choice"
+    },
+    {
+      "question": "Сен ... (әдемі)",
+      "options": [
+        "әдемімін",
+        "әдеміпін",
+        "әдемісың",
+        "әдемісің"
+      ],
+      "correct_index": 3,
+      "question_type": "multiple_choice"
+    },
+    {
+      "question": "Мен мұғаліммін",
+      "question_type": "listening",
+      "audio_text": "Мен мұғаліммін",
+      "options": [
+        "I am a student.",
+        "You are a teacher.",
+        "I am a teacher.",
+        "You are a student."
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Connect by sound",
+      "question_type": "connect-by-sound",
+      "pairs": [
+        {
+          "kazakh": "Мен дәрігермін",
+          "english": "I am a doctor."
+        },
+        {
+          "kazakh": "Сен студентсің",
+          "english": "You are a student."
+        }
+      ],
+      "points": 2
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "title": "Unit 3 Test: Мен/Сен",
+  "explanation_slides": [
+    "This test covers **personal pronouns** and **personal endings** you learned in Unit 3. Remember how to use **Мен** and **Сен** correctly.\\n\\nPay close attention to the sentence structure and the appropriate endings for each pronoun.",
+    "**Мен** means \"I\" and takes specific endings depending on the word. **Сен** means \"You\" (singular, informal) and has its own set of endings.\\n\\nReview the examples and practice questions to refresh your understanding of these concepts.",
+    "Remember the words **оқушы** (student) and **мұғалім** (teacher). These are common words used with Мен and Сен.\\n\\nThink about how these words change when you add personal endings."
+  ],
+  "examples": [
+    "Мен мұғаліммін. — I am a teacher.",
+    "Сен оқушысың. — You are a student.",
+    "Мен дәрігермін. — I am a doctor.",
+    "Сен доспын. — You are a friend."
+  ],
+  "quiz": [
+    {
+      "question": "Мен ...",
+      "options": [
+        "оқушымын",
+        "оқушысың",
+        "оқушы",
+        "оқушымыз"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Сен ...",
+      "options": [
+        "мұғаліммін",
+        "мұғалімсің",
+        "мұғалім",
+        "мұғалімбіз"
+      ],
+      "correct_index": 1,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Translate: I am a student.",
+      "options": [
+        "Сен оқушысың.",
+        "Мен мұғаліммін.",
+        "Мен оқушымын.",
+        "Сен мұғалімсің."
+      ],
+      "correct_index": 2,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Translate: You are a teacher.",
+      "options": [
+        "Мен оқушымын.",
+        "Сен мұғалімсің.",
+        "Мен мұғаліммін.",
+        "Сен оқушысың."
+      ],
+      "correct_index": 1,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Fill in the blank: Мен дәрігер____.",
+      "options": [
+        "мын",
+        "сің",
+        "мін",
+        "біз"
+      ],
+      "correct_index": 2,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Fill in the blank: Сен дос____.",
+      "options": [
+        "мін",
+        "сің",
+        "мын",
+        "біз"
+      ],
+      "correct_index": 1,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Connect by sound",
+      "question_type": "connect_by_sound",
+      "points": 2
+    },
+    {
+      "question": "Listening: Choose the correct sentence.",
+      "audio_text": "Мен оқушымын.",
+      "options": [
+        "Сен мұғалімсің.",
+        "Мен оқушымын.",
+        "Сен оқушысың.",
+        "Мен мұғаліммін."
+      ],
+      "correct_index": 1,
+      "question_type": "listening",
+      "points": 2
+    },
+    {
+      "question": "Listening: Choose the correct sentence.",
+      "audio_text": "Сен мұғалімсің.",
+      "options": [
+        "Мен оқушымын.",
+        "Сен мұғалімсің.",
+        "Сен оқушысың.",
+        "Мен мұғаліммін."
+      ],
+      "correct_index": 1,
+      "question_type": "listening",
+      "points": 2
+    },
+    {
+      "question": "Which pronoun means 'I'?",
+      "options": [
+        "Сен",
+        "Ол",
+        "Мен",
+        "Біз"
+      ],
+      "correct_index": 2,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Which pronoun means 'You' (informal, singular)?",
+      "options": [
+        "Мен",
+        "Ол",
+        "Сен",
+        "Біз"
+      ],
+      "correct_index": 2,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Complete the sentence: Мен студент____.",
+      "options": [
+        "сің",
+        "мін",
+        "пын",
+        "біз"
+      ],
+      "correct_index": 1,
+      "question_type": "mcq",
+      "points": 1
+    }
+  ]
+}

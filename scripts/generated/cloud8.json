@@ -1,0 +1,89 @@
+{
+  "title": "Мен және Сен",
+  "explanation_slides": [
+    "**Мен** means \"I\" in Kazakh. It's used to refer to yourself. Remember this basic pronoun!\\n\\nFor example: **Мен оқушымын** (Men oqushymyn) - I am a student.",
+    "**Сен** means \"you\" (singular, informal) in Kazakh. Use it when speaking to someone you know well, like a friend or family member.\\n\\nFor example: **Сен кімсің?** (Sen kimsing?) - Who are you?",
+    "**Оқушы** means \"student\" in Kazakh. This is a useful noun to know. It applies to students of all ages.\\n\\nFor example: **Ол оқушы** (Ol oqushy) - He/She is a student.\\n\\nRemember that Kazakh does not have grammatical gender, so **ол** can mean he or she."
+  ],
+  "examples": [
+    "Мен — I",
+    "Сен — You (informal, singular)",
+    "Оқушы — Student",
+    "Мен оқушымын — I am a student",
+    "Сен оқушысың — You are a student (informal)",
+    "Ол оқушы — He/She is a student",
+    "Мен мұғаліммін — I am a teacher (from Unit 2)",
+    "Сен мұғалімсің — You are a teacher (informal)"
+  ],
+  "quiz": [
+    {
+      "question_type": "translate_to_kazakh",
+      "text": "I",
+      "correct_answer": "Мен",
+      "points": 1
+    },
+    {
+      "question_type": "translate_to_english",
+      "text": "Сен",
+      "correct_answer": "You (informal)",
+      "points": 1
+    },
+    {
+      "question_type": "translate_to_kazakh",
+      "text": "Student",
+      "correct_answer": "Оқушы",
+      "points": 1
+    },
+    {
+      "question_type": "translate_to_english",
+      "text": "Мен оқушымын",
+      "correct_answer": "I am a student",
+      "points": 2
+    },
+    {
+      "question_type": "translate_to_kazakh",
+      "text": "You are a student (informal)",
+      "correct_answer": "Сен оқушысың",
+      "points": 2
+    },
+    {
+      "question_type": "translate_to_english",
+      "text": "Ол оқушы",
+      "correct_answer": "He/She is a student",
+      "points": 2
+    },
+    {
+      "question_type": "listening",
+      "question": "Listen and choose the correct word.",
+      "audio_text": "Оқушы",
+      "options": [
+        "Мұғалім",
+        "Оқушы",
+        "Дәрігер"
+      ],
+      "correct_index": 1,
+      "points": 2
+    },
+    {
+      "question_type": "connect_by_sound",
+      "question": "Connect by sound",
+      "pairs": [
+        {
+          "kazakh": "Мен",
+          "english": "I"
+        },
+        {
+          "kazakh": "Сен",
+          "english": "You (informal)"
+        }
+      ],
+      "points": 2
+    },
+    {
+      "question_type": "fill_in_the_blank",
+      "text": "____ оқушымын (I am a student)",
+      "correct_answer": "Мен",
+      "points": 1
+    }
+  ]
+}

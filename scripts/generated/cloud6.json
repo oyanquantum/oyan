@@ -1,0 +1,128 @@
+{
+  "title": "Жаңа сөздер (New Words)",
+  "explanation_slides": [
+    "Let's learn two new words: **мұғалім** (teacher) and **сыныптасы** (classmate). These are important for talking about school!",
+    "**Мұғалім** means 'teacher'. You'll use this word to address your teachers. Remember to be respectful!\\n\\nUse **Сәлеметсіз бе** when greeting a teacher. It's the polite form of 'hello'.",
+    "**Сыныптасы** means 'classmate'. These are the people you study with. It's great to be friendly with your classmates!\\n\\nUse **Сәлем** when greeting a classmate. It's the informal way to say 'hello'."
+  ],
+  "examples": [
+    "Мұғалім: Сәлеметсіз бе! — Teacher: Hello!",
+    "Сыныптасы: Сәлем! — Classmate: Hi!"
+  ],
+  "quiz": [
+    {
+      "question": "Мұғалім is...",
+      "answers": [
+        "Teacher",
+        "Student",
+        "Friend"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Сыныптасы is...",
+      "answers": [
+        "Classmate",
+        "Teacher",
+        "Principal"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "How do you greet a teacher?",
+      "answers": [
+        "Сәлеметсіз бе",
+        "Сәлем",
+        "Сау бол"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "How do you greet a classmate?",
+      "answers": [
+        "Сәлем",
+        "Сәлеметсіз бе",
+        "Көріскенше"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Connect by sound",
+      "question_type": "connect-by-sound",
+      "pairs": [
+        {
+          "kazakh": "Мұғалім",
+          "english": "Teacher"
+        },
+        {
+          "kazakh": "Сыныптасы",
+          "english": "Classmate"
+        }
+      ],
+      "points": 2
+    },
+    {
+      "question": "Choose the correct translation: Teacher",
+      "answers": [
+        "Мұғалім",
+        "Оқушы",
+        "Дос"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Choose the correct translation: Classmate",
+      "answers": [
+        "Сыныптасы",
+        "Мұғалім",
+        "Директор"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Fill in the blank: Hello (to a teacher) =  _______ бе",
+      "answers": [
+        "Сәлеметсіз",
+        "Сәлем",
+        "Рақмет"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Fill in the blank: Hi (to a classmate) = _______",
+      "answers": [
+        "Сәлем",
+        "Сәлеметсіз бе",
+        "Көріскенше"
+      ],
+      "correct_index": 0,
+      "question_type": "mcq",
+      "points": 1
+    },
+    {
+      "question": "Listening: Select the correct word.",
+      "audio_text": "Мұғалім",
+      "answers": [
+        "Мұғалім",
+        "Сыныптасы"
+      ],
+      "correct_index": 0,
+      "question_type": "listening",
+      "points": 1
+    }
+  ]
+}

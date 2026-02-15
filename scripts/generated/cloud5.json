@@ -1,0 +1,108 @@
+{
+  "title": "Greetings",
+  "explanation_slides": [
+    "**Сәлем** is a casual greeting, like \"Hi\" or \"Hello\". Use it with friends and family.\\n\\nIt's important to choose the right greeting in Kazakh to show respect. We'll learn formal and informal ways to say hello.",
+    "**Сәлеметсіз бе** is a formal greeting. Use it with elders, teachers, or people you don't know well. It means \"Hello\" but shows respect.\\n\\nThink of it like \"Good morning/afternoon/evening\" in English. It's always a safe and polite choice.",
+    "**Сау бол** means \"Goodbye\" in a casual way. Use it with friends and family when you're leaving.\\n\\nIt's similar to saying \"Bye\" or \"See you later\" in English. Keep it casual!",
+    "**Сау болыңыз** is the formal way to say \"Goodbye\". Use it with elders, teachers, or people you want to show respect to.\\n\\nIt's like saying \"Goodbye\" in a more polite way. Remember to use it in formal situations."
+  ],
+  "examples": [
+    "Сәлем! — Hi!",
+    "Сәлеметсіз бе? — Hello! (formal)",
+    "Сау бол! — Goodbye! (informal)",
+    "Сау болыңыз! — Goodbye! (formal)",
+    "Сәлем, Әлия! — Hi, Aliya!",
+    "Сәлеметсіз бе, апай? — Hello, teacher! (formal)"
+  ],
+  "quiz": [
+    {
+      "question_type": "listening",
+      "question": "Listen and choose the correct greeting.",
+      "audio_text": "Сәлем",
+      "answers": [
+        "Сәлем",
+        "Сау бол",
+        "Сәлеметсіз бе",
+        "Сау болыңыз"
+      ],
+      "correct_index": 0,
+      "points": 1
+    },
+    {
+      "question": "Choose the formal greeting.",
+      "answers": [
+        "Сәлем",
+        "Сәлеметсіз бе",
+        "Сау бол",
+        "Hi"
+      ],
+      "correct_index": 1,
+      "points": 1
+    },
+    {
+      "question": "Which greeting do you use with a friend?",
+      "answers": [
+        "Сәлеметсіз бе",
+        "Сау болыңыз",
+        "Сәлем",
+        "None of the above"
+      ],
+      "correct_index": 2,
+      "points": 1
+    },
+    {
+      "question": "Translate: Goodbye! (formal)",
+      "answers": [
+        "Сәлем!",
+        "Сау бол!",
+        "Сәлеметсіз бе!",
+        "Сау болыңыз!"
+      ],
+      "correct_index": 3,
+      "points": 1
+    },
+    {
+      "question": "Choose the informal farewell.",
+      "answers": [
+        "Сау бол",
+        "Сау болыңыз",
+        "Сәлеметсіз бе",
+        "Сәлем"
+      ],
+      "correct_index": 0,
+      "points": 1
+    },
+    {
+      "question": "Which farewell do you use with a teacher?",
+      "answers": [
+        "Сау бол",
+        "Сәлем",
+        "Сау болыңыз",
+        "None of the above"
+      ],
+      "correct_index": 2,
+      "points": 1
+    },
+    {
+      "question": "Translate: Hello! (informal)",
+      "answers": [
+        "Сәлем!",
+        "Сау бол!",
+        "Сәлеметсіз бе!",
+        "Сау болыңыз!"
+      ],
+      "correct_index": 0,
+      "points": 1
+    },
+    {
+      "question": "Connect by sound: Сау бол",
+      "question_type": "connect-by-sound",
+      "points": 2
+    },
+    {
+      "question": "Connect by sound: Сәлеметсіз бе",
+      "question_type": "connect-by-sound",
+      "points": 2
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "title": "Unit 2 Test",
+  "explanation_slides": [
+    "This is a test to check your understanding of Units 1 and 2. It covers greetings, farewells, and basic vocabulary like **мұғалім** (teacher) and **сыныптасы** (classmate).\\n\\nRemember the difference between formal and informal greetings. Good luck!",
+    "**Сәлем** is an informal greeting, used with friends and family. It's like saying 'Hi' or 'Hello' in English.\\n\\n**Сәлеметсіз бе** is a formal greeting, used with elders, teachers, or people you don't know well. It's like saying 'Good morning/afternoon/evening'.\\n\\nPay attention to context when choosing the right greeting!"
+  ],
+  "examples": [
+    "Сәлем, достар! — Hi, friends!",
+    "Сәлеметсіз бе, апай? — Good morning/afternoon/evening, teacher?",
+    "Сау бол! — Goodbye!",
+    "Көріскенше! — See you later!"
+  ],
+  "quiz": [
+    {
+      "question_type": "multiple_choice",
+      "question": "How would you greet your teacher in the morning?",
+      "options": [
+        "Сәлем!",
+        "Сау бол!",
+        "Көріскенше!",
+        "Сәлеметсіз бе!"
+      ],
+      "correct_index": 3,
+      "points": 1
+    },
+    {
+      "question_type": "multiple_choice",
+      "question": "Which greeting is informal?",
+      "options": [
+        "Сәлеметсіз бе?",
+        "Сәлем!",
+        "Рақмет!",
+        "Көріскенше!"
+      ],
+      "correct_index": 1,
+      "points": 1
+    },
+    {
+      "question_type": "fill_in_the_blank",
+      "question": "Complete the sentence: _____, достар! (Hi, friends!)",
+      "correct_answer": "Сәлем",
+      "points": 1
+    },
+    {
+      "question_type": "matching",
+      "question": "Match the Kazakh word with its English translation.",
+      "pairs": [
+        {
+          "kazakh": "Мұғалім",
+          "english": "Teacher"
+        },
+        {
+          "kazakh": "Сыныптасы",
+          "english": "Classmate"
+        },
+        {
+          "kazakh": "Сау бол",
+          "english": "Goodbye"
+        }
+      ],
+      "points": 3
+    },
+    {
+      "question_type": "multiple_choice",
+      "question": "What does 'Көріскенше!' mean?",
+      "options": [
+        "Hello!",
+        "Goodbye!",
+        "See you later!",
+        "Thank you!"
+      ],
+      "correct_index": 2,
+      "points": 1
+    },
+    {
+      "question_type": "listening",
+      "question": "Choose the correct greeting you hear.",
+      "audio_text": "Сәлеметсіз бе?",
+      "options": [
+        "Сәлем!",
+        "Сәлеметсіз бе?",
+        "Сау бол!",
+        "Рақмет!"
+      ],
+      "correct_index": 1,
+      "points": 1
+    },
+    {
+      "question_type": "true_false",
+      "question": "'Сәлем' is a formal greeting.",
+      "correct_answer": false,
+      "points": 1
+    },
+    {
+      "question_type": "fill_in_the_blank",
+      "question": "Complete the sentence: Сәлеметсіз _____, ағай? (Good morning/afternoon/evening, sir?)",
+      "correct_answer": "бе",
+      "points": 1
+    },
+    {
+      "question_type": "connect_by_sound",
+      "question": "Connect by sound",
+      "pairs": [
+        {
+          "kazakh": "Сәлем",
+          "english": "Hi"
+        },
+        {
+          "kazakh": "Сау бол",
+          "english": "Goodbye"
+        }
+      ],
+      "points": 2
+    },
+    {
+      "question_type": "multiple_choice",
+      "question": "You are leaving school for the day. What do you say to your classmate?",
+      "options": [
+        "Сәлеметсіз бе?",
+        "Рақмет!",
+        "Сау бол!",
+        "Көріскенше!"
+      ],
+      "correct_index": 2,
+      "points": 1
+    },
+    {
+      "question_type": "multiple_choice",
+      "question": "Which word means 'teacher'?",
+      "options": [
+        "Дос",
+        "Мұғалім",
+        "Сынып",
+        "Оқушы"
+      ],
+      "correct_index": 1,
+      "points": 1
+    }
+  ]
+}

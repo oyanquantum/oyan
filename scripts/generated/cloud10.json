@@ -1,0 +1,109 @@
+{
+  "title": "Мен және Сен",
+  "explanation_slides": [
+    "This lesson focuses on using **personal pronouns** with **descriptive words**. We'll learn how to say \"I am a teacher\" and \"You are a student\" in Kazakh. \\n\\nRemember **Мен** (I) and **Сен** (You). These are fundamental to forming sentences about yourself and others.",
+    "When describing yourself, use the suffix **-мін** after the descriptive word. For example, to say \"I am a teacher,\" you would say **Мен мұғаліммін**. \\n\\n**Мұғалім** means teacher. Adding **-мін** connects it to **Мен** (I).",
+    "When describing someone else (using **Сен** - You), use the suffix **-сың** after the descriptive word. To say \"You are a student,\" you would say **Сен оқушысың**. \\n\\n**Оқушы** means student. The suffix **-сың** links the description to **Сен** (You).",
+    "Let's recap! **Мен + descriptive word + -мін** (I am...). **Сен + descriptive word + -сың** (You are...). \\n\\nPractice these patterns to describe yourself and others using different words."
+  ],
+  "examples": [
+    "Мен дәрігермін — I am a doctor",
+    "Сен студентсің — You are a student",
+    "Мен жүргізушімін — I am a driver",
+    "Сен әншісің — You are a singer"
+  ],
+  "quiz": [
+    {
+      "question_type": "listening",
+      "question": "Listen and choose the correct sentence.",
+      "audio_text": "Сен оқушысың",
+      "answers": [
+        "Мен оқушымын",
+        "Сен оқушысың",
+        "Ол оқушы"
+      ],
+      "correct_index": 1,
+      "points": 1
+    },
+    {
+      "question": "Мен дәрігер…",
+      "answers": [
+        "мін",
+        "сің",
+        "міз"
+      ],
+      "correct_index": 0,
+      "points": 1
+    },
+    {
+      "question": "Сен мұғалім…",
+      "answers": [
+        "мін",
+        "сің",
+        "міз"
+      ],
+      "correct_index": 1,
+      "points": 1
+    },
+    {
+      "question": "I am a driver",
+      "answers": [
+        "Мен жүргізушімін",
+        "Сен жүргізушісің",
+        "Ол жүргізуші"
+      ],
+      "correct_index": 0,
+      "points": 1
+    },
+    {
+      "question": "You are a doctor",
+      "answers": [
+        "Мен дәрігермін",
+        "Сен дәрігерсің",
+        "Ол дәрігер"
+      ],
+      "correct_index": 1,
+      "points": 1
+    },
+    {
+      "question": "Мен студент…",
+      "answers": [
+        "мін",
+        "сің",
+        "міз"
+      ],
+      "correct_index": 0,
+      "points": 1
+    },
+    {
+      "question": "Сен әнші…",
+      "answers": [
+        "мін",
+        "сің",
+        "міз"
+      ],
+      "correct_index": 1,
+      "points": 1
+    },
+    {
+      "question": "I am a singer",
+      "answers": [
+        "Мен әншімін",
+        "Сен әншісің",
+        "Ол әнші"
+      ],
+      "correct_index": 0,
+      "points": 1
+    },
+    {
+      "question": "You are a teacher",
+      "answers": [
+        "Мен мұғаліммін",
+        "Сен мұғалімсің",
+        "Ол мұғалім"
+      ],
+      "correct_index": 1,
+      "points": 1
+    }
+  ]
+}
