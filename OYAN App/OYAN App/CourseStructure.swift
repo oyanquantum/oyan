@@ -167,7 +167,7 @@ struct GeneratedLessonContent: Codable {
                     GeneratedQuizItem(question: "бас has ___ vowels.", options: ["Hard", "Soft", "No", "Mixed"], correctIndex: 0),
                     GeneratedQuizItem(question: "кет has ___ vowels.", options: ["Soft", "Hard", "No", "Mixed"], correctIndex: 0),
                     GeneratedQuizItem(question: "One word usually has:", options: ["Only hard or only soft vowels", "Mixed vowels always", "One vowel only", "No vowels"], correctIndex: 0),
-                    GeneratedQuizItem(question: "қыз uses which type of vowels?", options: ["Soft", "Hard", "Neither", "Both"], correctIndex: 0),
+                    GeneratedQuizItem(question: "қыз uses which type of vowels?", options: ["Soft", "Hard", "Neither", "Both"], correctIndex: 1),
                 ]
             )
         case 4:
@@ -248,11 +248,11 @@ struct GeneratedLessonContent: Codable {
                 quiz: [
                     GeneratedQuizItem(question: "How would you greet your teacher in the morning?", options: ["Сәлем!", "Сау бол!", "Көріскенше!", "Сәлеметсіз бе!"], correctIndex: 3, points: 1, type: "multiple_choice"),
                     GeneratedQuizItem(question: "Which greeting is informal?", options: ["Сәлеметсіз бе?", "Сәлем!", "Рақмет!", "Көріскенше!"], correctIndex: 1, points: 1, type: "multiple_choice"),
-                    GeneratedQuizItem(question: "Complete the sentence: _____, достар! (Hi, friends!)", options: ["Сәлем", "Сәлем!", "Сау бол!", "Көріскенше!"], correctIndex: 0, points: 1, type: "fill_in_the_blank"),
-                    GeneratedQuizItem(question: "Match the Kazakh word with its English translation.", options: ["Yes", "No"], correctIndex: 0, points: 3, type: "matching"),
+                    GeneratedQuizItem(question: "Complete the sentence: _____, достар! (Hi, friends!)", options: ["Сәлем", "Сау бол!", "Көріскенше!"], correctIndex: 0, points: 1, type: "fill_in_the_blank"),
+                    GeneratedQuizItem(question: "What does Мұғалім mean?", options: ["Teacher", "Student", "Hello", "Goodbye"], correctIndex: 0, points: 3, type: "multiple_choice"),
                     GeneratedQuizItem(question: "What does 'Көріскенше!' mean?", options: ["Hello!", "Goodbye!", "See you later!", "Thank you!"], correctIndex: 2, points: 1, type: "multiple_choice"),
                     GeneratedQuizItem(question: "Choose the correct greeting you hear.", options: ["Сәлем!", "Сәлеметсіз бе?", "Сау бол!", "Рақмет!"], correctIndex: 1, points: 1, type: "listening", audioText: "Сәлеметсіз бе?"),
-                    GeneratedQuizItem(question: "'Сәлем' is a formal greeting.", options: ["Yes", "No"], correctIndex: 0, points: 1, type: "true_false"),
+                    GeneratedQuizItem(question: "'Сәлем' is a formal greeting.", options: ["Yes", "No"], correctIndex: 1, points: 1, type: "true_false"),
                     GeneratedQuizItem(question: "Complete the sentence: Сәлеметсіз _____, ағай? (Good morning/afternoon/evening, sir?)", options: ["бе", "Сәлем!", "Сау бол!", "Көріскенше!"], correctIndex: 0, points: 1, type: "fill_in_the_blank"),
                     GeneratedQuizItem(question: "What does Сәлем mean?", options: ["Hi", "Student", "Teacher", "Hello"], correctIndex: 0, points: 2, type: "multiple_choice"),
                     GeneratedQuizItem(question: "You are leaving school for the day. What do you say to your classmate?", options: ["Сәлеметсіз бе?", "Рақмет!", "Сау бол!", "Көріскенше!"], correctIndex: 2, points: 1, type: "multiple_choice"),
@@ -291,12 +291,12 @@ struct GeneratedLessonContent: Codable {
                 ],
                 examples: ["Мен студентпін — I am a student.", "Сен дәрігерсің — You are a doctor.", "Мен мұғаліммін — I am a teacher.", "Сен әдемісің — You are beautiful.", "Мен қазақпын — I am Kazakh.", "Сен ақылдысың — You are smart."],
                 quiz: [
-                    GeneratedQuizItem(question: "Мен ... (мұғалім)", options: ["мұғаліммін", "мұғаліммін", "мұғалімсың", "мұғалімсің"], correctIndex: 0, type: "multiple_choice"),
-                    GeneratedQuizItem(question: "Сен ... (дәрігер)", options: ["дәрігермін", "дәрігерсың", "дәрігермін", "дәрігерсің"], correctIndex: 3, type: "multiple_choice"),
-                    GeneratedQuizItem(question: "Мен ... (студент)", options: ["студентпін", "студентмін", "студентсың", "студентсің"], correctIndex: 0, type: "multiple_choice"),
-                    GeneratedQuizItem(question: "Сен ... (ақылды)", options: ["ақылдымын", "ақылдысың", "ақылдымін", "ақылдысің"], correctIndex: 1, type: "multiple_choice"),
-                    GeneratedQuizItem(question: "Мен ... (қазақ)", options: ["қазақпын", "қазақмін", "қазақсың", "қазақсің"], correctIndex: 0, type: "multiple_choice"),
-                    GeneratedQuizItem(question: "Сен ... (әдемі)", options: ["әдемімін", "әдеміпін", "әдемісың", "әдемісің"], correctIndex: 3, type: "multiple_choice"),
+                    GeneratedQuizItem(question: "Complete the sentence: Мен мұғалім____.", options: ["мін", "сың", "сің"], correctIndex: 0, type: "multiple_choice"),
+                    GeneratedQuizItem(question: "Complete the sentence: Сен дәрігер____.", options: ["мін", "сың", "сің"], correctIndex: 2, type: "multiple_choice"),
+                    GeneratedQuizItem(question: "Complete the sentence: Мен студент____.", options: ["пін", "мін", "сың", "сің"], correctIndex: 0, type: "multiple_choice"),
+                    GeneratedQuizItem(question: "Complete the sentence: Сен ақылды____.", options: ["мын", "сың", "мін", "сің"], correctIndex: 1, type: "multiple_choice"),
+                    GeneratedQuizItem(question: "Complete the sentence: Мен қазақ____.", options: ["пын", "мін", "сың", "сің"], correctIndex: 0, type: "multiple_choice"),
+                    GeneratedQuizItem(question: "Complete the sentence: Сен әдемі____.", options: ["мін", "пін", "сың", "сің"], correctIndex: 3, type: "multiple_choice"),
                     GeneratedQuizItem(question: "Мен мұғаліммін", options: ["I am a student.", "You are a teacher.", "I am a teacher.", "You are a student."], correctIndex: 2, type: "listening", audioText: "Мен мұғаліммін"),
                     GeneratedQuizItem(question: "What does Мен дәрігермін mean?", options: ["I am a doctor.", "You are a student.", "Student", "Teacher"], correctIndex: 0, points: 2, type: "multiple_choice")
                 ]

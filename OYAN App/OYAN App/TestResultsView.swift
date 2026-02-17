@@ -32,6 +32,8 @@ struct TestResultsView: View {
     @State private var isSaving: Bool = false
     @State private var saveError: String? = nil
     @State private var showSaveError: Bool = false
+    /// For intermediate/advanced: true = show level first, false = show course-in-dev screen
+    @State private var showedLevelScreen: Bool = false
 
     let backgroundColor = Color(hex: "#fbf5e0")
     let buttonColor = Color(hex: "#ffa812")
@@ -67,6 +69,12 @@ struct TestResultsView: View {
         selectedLanguage == .english
             ? "Course for you is currently in development:)"
             : "Курс для вас сейчас в разработке:)"
+    }
+
+    var movedToBeginnerText: String {
+        selectedLanguage == .english
+            ? "You will be moved on to the beginner's course for now."
+            : "Пока вы будете перенаправлены на курс для начинающих."
     }
 
     var continueButtonText: String {
@@ -117,13 +125,49 @@ struct TestResultsView: View {
                             .scaledToFit()
                             .frame(maxWidth: 320, maxHeight: 320)
                     }
+                } else if !showedLevelScreen {
+                    // Intermediate / Advanced, step 1: show level first (same style as beginner)
+                    ZStack(alignment: .topTrailing) {
+                        VStack(alignment: .trailing, spacing: 0) {
+                            Text(bubbleText)
+                                .font(.headline)
+                                .foregroundColor(.black)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 20)
+                                .padding(.vertical, 14)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .fill(Color.white)
+                                        .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
+                                )
+                            Path { path in
+                                path.move(to: CGPoint(x: 0, y: 0))
+                                path.addLine(to: CGPoint(x: 20, y: 0))
+                                path.addLine(to: CGPoint(x: 10, y: 15))
+                                path.closeSubpath()
+                            }
+                            .fill(Color.white)
+                            .frame(width: 20, height: 15)
+                            .offset(x: -50, y: -2)
+                        }
+                        .padding(.bottom, 20)
+
+                        Image("eagle_happy")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: 320, maxHeight: 320)
+                    }
                 } else {
-                    // Intermediate / Advanced: course in development message
+                    // Intermediate / Advanced, step 2: course in development + moved to beginner
                     VStack(spacing: 20) {
                         Text(courseInDevelopmentText)
                             .font(.title2)
                             .fontWeight(.semibold)
                             .foregroundColor(.primary)
+                            .multilineTextAlignment(.center)
+                        Text(movedToBeginnerText)
+                            .font(.body)
+                            .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 24)
                     }
@@ -133,7 +177,11 @@ struct TestResultsView: View {
                 Spacer()
 
                 Button {
-                    saveResultAndGoHome()
+                    if !isCourseAvailable && !showedLevelScreen {
+                        showedLevelScreen = true
+                    } else {
+                        saveResultAndGoHome()
+                    }
                 } label: {
                     Group {
                         if isSaving {

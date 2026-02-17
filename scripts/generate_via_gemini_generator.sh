@@ -29,6 +29,9 @@ FORMATTING RULES (critical - match Unit 1 style):
 correct_index 0-based. For listening: question_type "listening", audio_text with Kazakh. For connect-by-sound: question "Connect by sound: [phrase]" (include the Kazakh phrase), points 2.
 CRITICAL: Every quiz item MUST have a clear "question" field. NEVER use "?" or leave question empty.
 MULTIPLE CHOICE: Every multiple-choice, translate, and fill-in question MUST have at least 3 answer options (preferably 4). Never use 2 options or placeholder "—".
+FILL-IN: Put blank AFTER the word (e.g. "Мен дәрігер____"). For "X ... (Y)" use "X Y____" with endings as options.
+NO DUPLICATES: Never use both "Сәлем" and "Сәлем!" or мұғаліммін twice. All options must be distinct.
+MATCH: Include pairs {kazakh, english}. Never use Yes/No for matching questions.
 connect_by_sound: ONLY for Unit 1 (clouds 1-4) with options like ["Жү","Мы","сық","рек"]. For Unit 2 & 3, use multiple_choice instead (e.g. "What does X mean?").'
 
 call_gemini() {

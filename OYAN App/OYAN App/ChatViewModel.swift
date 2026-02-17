@@ -77,12 +77,15 @@ final class ChatViewModel: ObservableObject {
             messages.append(assistantMessage)
             await saveMessage(assistantMessage)
         } catch {
-            let errorMessage = ChatMessage(
-                role: .assistant,
-                text: "Кешіріңіз, қате орын алды. Тағы көріңіз."
-            )
-            messages.append(errorMessage)
-            // Don't persist error messages
+            if userMessageCount >= chatMessageLimit {
+                showUsageLimitAlert = true
+            } else {
+                let errorMessage = ChatMessage(
+                    role: .assistant,
+                    text: "Кешіріңіз, қате орын алды. Тағы көріңіз."
+                )
+                messages.append(errorMessage)
+            }
         }
 
         isLoading = false

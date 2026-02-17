@@ -7,6 +7,7 @@ and update OYAN App/OYAN App/CourseStructure.swift bundled content for Unit 2 & 
 import json
 import os
 import re
+from typing import Optional
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 GEN_DIR = os.path.join(SCRIPT_DIR, "generated")
@@ -27,6 +28,86 @@ _CONNECT_MEANINGS = {
     "Оқушы": "Student",
     "Мұғалім": "Teacher",
 }
+
+
+def _normalize_for_dedup(s: str) -> str:
+    """Normalize option for deduplication: strip trailing punctuation, case-fold."""
+    if not s:
+        return ""
+    t = str(s).strip().rstrip("!?.,;:")
+    return t
+
+
+def _deduplicate_options(opts: list, correct_index: int):
+    """Remove duplicate/near-duplicate options. Returns (deduped_opts, new_correct_index)."""
+    if not opts:
+        return opts, correct_index
+    seen = {}
+    out = []
+    for i, o in enumerate(opts):
+        key = _normalize_for_dedup(o)
+        if key and key not in seen:
+            seen[key] = len(out)
+            out.append(o)
+    if not out:
+        return opts, correct_index
+    # Remap correct_index if we removed the correct option's duplicate
+    correct_val = opts[correct_index] if 0 <= correct_index < len(opts) else opts[0]
+    new_idx = next((i for i, x in enumerate(out) if _normalize_for_dedup(x) == _normalize_for_dedup(correct_val)), 0)
+    return out, new_idx
+
+
+def _convert_matching_to_mcq(q: dict) -> Optional[dict]:
+    """Convert matching question with pairs to MCQ. Never use Yes/No for matching."""
+    pairs = q.get("pairs", [])
+    if not pairs:
+        return None
+    first = pairs[0]
+    kazakh = first.get("kazakh", "").strip()
+    english = first.get("english", "").strip()
+    if not kazakh or not english:
+        return None
+    others = [p.get("english", "") for p in pairs[1:] if p.get("english")]
+    distractors = ["Student", "Teacher", "Hello", "Goodbye", "I", "You", "Classmate", "Hi"]
+    for o in others:
+        if o and o != english and o not in distractors:
+            distractors.insert(0, o)
+    opts = [english]
+    for d in distractors:
+        if d != english and d not in opts and len(opts) < 4:
+            opts.append(d)
+    return {
+        "question": f"What does {kazakh} mean?",
+        "options": opts[:4],
+        "correct_index": 0,
+        "points": q.get("points", 2),
+        "question_type": "multiple_choice",
+    }
+
+
+def _fix_fill_in_blank_question(q: dict) -> None:
+    """Fix fill-in-the-blank format: X ... (Y) → X Y____ with endings as options."""
+    raw = q.get("question", "")
+    correct = q.get("correct_answer")
+    opts = q.get("options", q.get("answers", []))
+    # Pattern: "Мен ... (мұғалім)" with options like мұғаліммін, мұғалімсің → "Мен мұғалім____." + endings
+    m = re.search(r"^(.+?)\s+\.\.\.\s+\(([^)]+)\)\s*$", raw)
+    if m and opts and (isinstance(correct, str) or correct is None):
+        prefix, word = m.group(1).strip(), m.group(2).strip()
+        new_q = f"Complete the sentence: {prefix} {word}____."
+        q["question"] = new_q
+        # Extract endings: мұғаліммін → мін, мұғалімсің → сің
+        endings = []
+        for o in opts:
+            if isinstance(o, str) and word and o.startswith(word):
+                endings.append(o[len(word):].strip())
+            else:
+                endings.append(o)
+        if len(endings) >= 2 and all(isinstance(e, str) and len(e) <= 6 for e in endings):
+            q["options"] = endings
+            ci = q.get("correct_index", q.get("correctIndex", 0))
+            if 0 <= ci < len(opts) and opts[ci].startswith(word):
+                q["correct_index"] = endings.index(opts[ci][len(word):].strip()) if opts[ci][len(word):].strip() in endings else 0
 
 
 def _convert_connect_to_mcq(q):
@@ -185,8 +266,9 @@ def quiz_item_to_swift(q, indent="                    "):
         c = q.get("correct_answer")
         if c and c not in opts:
             opts = [c] + [o for o in opts if o != c]
-    options = [escape_swift(o) for o in (opts if len(opts) >= 2 else opts + ["Yes", "No"][: 3 - len(opts)])]
     correct_index = q.get("correct_index", q.get("correctIndex", 0))
+    opts, correct_index = _deduplicate_options(opts, correct_index)
+    options = [escape_swift(o) for o in (opts if len(opts) >= 2 else opts + ["Yes", "No"][: 3 - len(opts)])]
     points = q.get("points")
     qtype = q.get("question_type")
     audio = q.get("audio_text")
@@ -219,6 +301,23 @@ def content_to_swift_case(cloud: int, data: dict, lang: str) -> str:
                     continue
                 # Skip broken connect_by_sound (no pairs, no phrase to extract)
                 continue
+        if qtype == "matching":
+            converted = _convert_matching_to_mcq(q)
+            if converted:
+                quiz.append(converted)
+                continue
+            # Skip broken matching (no pairs)
+            continue
+        if qtype in ("fill_in_the_blank", "multiple_choice"):
+            _fix_fill_in_blank_question(q)
+        if qtype == "true_false":
+            correct_val = q.get("correct_answer")
+            if correct_val is False:
+                q["correct_index"] = 1  # No
+                q["options"] = ["Yes", "No"]
+            else:
+                q["correct_index"] = 0  # Yes
+                q["options"] = ["Yes", "No"]
         _ensure_min_options(q, quiz_raw, examples)
         quiz.append(q)
     slides_str = ",\n                ".join(f'"{escape_swift(s)}"' for s in slides)

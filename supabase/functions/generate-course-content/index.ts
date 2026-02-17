@@ -86,6 +86,9 @@ Rules:
 - correct_index is 0-based.
 - CRITICAL: Every quiz item MUST have a clear "question" field. NEVER use "?" or leave question empty. Examples: "Translate to Kazakh: I", "What does Сен mean?", "Connect by sound: Сау бол".
 - Every multiple-choice, translate, and fill-in question MUST have at least 3 answer options (preferably 4). Never use 2 options or placeholders.
+- For fill-in-the-blank: put the blank AFTER the word (e.g. "Мен дәрігер____" not "Мен ____ дәрігер"). For "X ... (Y)" pattern use "X Y____" with endings as options.
+- NEVER use duplicate or near-duplicate options (e.g. both "Сәлем" and "Сәлем!" — pick one). All options must be clearly distinct.
+- For match questions: include pairs with kazakh + english. The app converts to MCQ; never output only Yes/No for matching.
 - Output ONLY the JSON object, nothing else.`;
 }
 
@@ -201,6 +204,26 @@ serve(async (req: Request) => {
     if (!Array.isArray(content.explanation_slides)) content.explanation_slides = [unitSummary];
     if (!Array.isArray(content.examples)) content.examples = [];
     if (!Array.isArray(content.quiz)) content.quiz = [];
+
+    // Convert matching (with pairs) to MCQ — never return Yes/No for match
+    const rawQuiz = content.quiz as Array<QuizItem & { pairs?: Array<{ kazakh?: string; english?: string }> }>;
+    content.quiz = rawQuiz.flatMap((q) => {
+      if ((q.question_type === "match" || q.question_type === "matching") && Array.isArray(q.pairs) && q.pairs.length > 0) {
+        const first = q.pairs[0];
+        const kazakh = first?.kazakh ?? "";
+        const english = first?.english ?? "";
+        if (kazakh && english) {
+          const others = q.pairs.slice(1).map((p) => p.english).filter(Boolean);
+          const distractors = ["Student", "Teacher", "Hello", "Goodbye", ...others];
+          const opts = [english];
+          for (const d of distractors) {
+            if (d && d !== english && !opts.includes(d) && opts.length < 4) opts.push(d);
+          }
+          return [{ question: `What does ${kazakh} mean?`, options: opts, correct_index: 0, points: q.points ?? 2, question_type: "multiple_choice" as const, audio_text: null }];
+        }
+      }
+      return [q];
+    });
 
     content.quiz = content.quiz.map((q) => ({
       question: q.question || "?",
