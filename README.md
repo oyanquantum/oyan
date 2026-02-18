@@ -46,6 +46,8 @@ Our mission is to make Kazakh accessible to foreigners and modernize the way the
 4. Press Run
 
 > The app connects to Supabase and AI APIs automatically.
+> Before executing the code, in the main settings of the file you have to select a team (your Apple ID), in order to proceed.
+> Also, if the Status in the main settings shows a failure, simply change the identifier Bundle Identifier title to a different one
 
 ---
 
